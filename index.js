@@ -10,8 +10,8 @@ if (req.url === '/api' && req.method === 'GET') {
     console.log('Received request for /api');
     res.end(JSON.stringify(destination));
 } else if (req.url === '/api/continent' && req.method === 'GET') {
-  res.end(JSON.stringify(destination.map(item => item.continent)));
-else {
+    res.end(JSON.stringify(destination.map(item => item.continent)));
+} else {
   res.statusCode = 404;
   res.end(JSON.stringify({ 
     error: 'Not Found', 
